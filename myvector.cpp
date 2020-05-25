@@ -19,7 +19,7 @@ myvector::myvector(int size) {
 
 
 
-void myvector::WorkMode()
+void myvector::WorkMode()     //это не нужно, просто недоделанный кусок моего кода
 {
     myvector Aktivator();
     int indin, valint;
@@ -54,8 +54,8 @@ void myvector::WorkMode()
     Print();
 }
 
-void myvector::Append(int index, int value) //ЗДЕСЬ ОШИБКА ВСПОМНИ ПРО 2 ВОСЬМЕРКИ И ПОСМОТРИ В ТЕЛЕФОН 3:45
-{                                           //ИЛИ ЗАПУСТИ ПРОГУ ЕЩЕ РАЗ
+void myvector::Append(int index, int value)
+{
     if (index>(m_size-1)) {
         Expansion();
     }
@@ -103,7 +103,7 @@ void myvector::Expansion()
     }
 }
 
-void myvector::Deletion() //УДАЛЯЕТ ОДИН ЛИШНИЙ ЭЛЕМЕНТ
+void myvector::Deletion()
 {
     bool tester = false;
     for (int i = (m_size/2); i < m_size; i++) {
@@ -127,9 +127,3 @@ void myvector::Deletion() //УДАЛЯЕТ ОДИН ЛИШНИЙ ЭЛЕМЕНТ
         }
     }
 }
-
-void myvector::LengthCheck()
-{
-    //sizeof (array)
-}
-

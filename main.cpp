@@ -2,7 +2,8 @@
 #include "myvector.h"
 #include <QDebug>
 
-int main()
+int main()                //ТУТ ПРОСТО ОТЛАДКА
+                           //МОЖЕШЬ В МЭЙНЕ ПИСАТЬ ЧТО УГОДНО
 {
     myvector Vector(14);  //цифра = количество элементов
    // Vector.WorkMode();
