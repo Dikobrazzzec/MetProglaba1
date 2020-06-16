@@ -2,21 +2,15 @@
 #include "myvector.h"
 #include <QDebug>
 
-int main()                //ТУТ ПРОСТО ОТЛАДКА
-                           //МОЖЕШЬ В МЭЙНЕ ПИСАТЬ ЧТО УГОДНО
+int main()
 {
     myvector Vector(14);  //цифра = количество элементов
-   // Vector.WorkMode();
-    //    Vector.Append(7,12); //номер элемента с учетом 0, значение элемента
-      //      Vector.Print();
-    for (int a=7; a<14; a++) {
-        Vector.Append(a,0);
-            Vector.Print();
-    }
     qDebug()<<"main";
-    Vector.Deletion();
-    Vector.Print();
- //   Vector.Append(7,12); //номер элемента с учетом 0, значение элемента
- //   Vector.Print();
+    Vector.WorkMode();
+//    Vector.Append(0,1);
+//    Vector.Append(1,2);
+ //   Vector.Append(2,3);
+//    Vector.Append(3,4);
+//    Vector.Print();
     return 0;
 }

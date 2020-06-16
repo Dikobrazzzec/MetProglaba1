@@ -10,23 +10,20 @@ myvector::myvector() {}
 
 myvector::myvector(int size) {
     array = new int[size];
-    for (int i = 0; i < size; i++) {
-        array[i] = i;
-        qDebug()<<array[i];
-    }
     m_size = size;
+    for (int i = 0; i < m_size; i++) {
+        array[i] = 0;
+    }
 }
 
 
 
-void myvector::WorkMode()     //это не нужно, просто недоделанный кусок моего кода
+void myvector::WorkMode()
 {
     myvector Aktivator();
     int indin, valint;
+    lbl:
     qDebug()<<"Enter workmode: append - 1, remove - 2, at - 3, print - 4.";
-//     qDebug()<<"rabotaet";
-//     QString WMP;
-//     WMP = cin.readLine();
     cin >>WMP;
     switch (WMP) {
     case 1:
@@ -39,18 +36,28 @@ void myvector::WorkMode()     //это не нужно, просто недод�
         qDebug()<<"Enter value ";
         cout.flush();
         cin>>valint;
-        Append(indin, valint);
+        Append(indin -1, valint);
         break;
     case 2:
         qDebug()<<"You selected work mode Remove.";
+        qDebug()<<"Enter index";
+        cout.flush();
+        cin>>indin;
+        Remove(indin-1);
         break;
     case 3:
         qDebug()<<"You selected work mode At.";
+        qDebug()<<"Enter index";
+        cout.flush();
+        cin>>indin;
+        At(indin);
         break;
     case 4:
         qDebug()<<"You selected work mode Print.";
+        Print();
         break;
     }
+    goto lbl;
     Print();
 }
 
